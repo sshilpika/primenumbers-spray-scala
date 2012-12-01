@@ -6,17 +6,19 @@ import spray.http._
 import StatusCodes._
 
 
-class PrimeNumberServiceSpec extends Specification with Specs2RouteTest with PrimeNumberService {
-  def actorRefFactory = system
-  
-  "The DemoService" should {
+class PrimeNumberServiceSpec extends Specification with Specs2RouteTest
+  with PredicateCheckerService with PrimeNumberChecker {
 
-    "return a greeting for GET requests to the root path" in {
-      Get() ~> demoRoute ~> check { entityAs[String] must contain("Say hello") }
+  def actorRefFactory = system
+
+  "The PrimeNumberService" should {
+
+    "identify 6007 as a prime" in {
+      Get("/6007") ~> demoRoute ~> check { entityAs[String] must contain("6007") }
     }
 
-    "return a 'PONG!' response for GET requests to /ping" in {
-      Get("/ping") ~> demoRoute ~> check { entityAs[String] === "PONG!" }
+    "identify 6008 as a non-prime" in {
+      Get("/6008") ~> demoRoute ~> check { status === NotFound }
     }
 
     "leave GET requests to other paths unhandled" in {
@@ -24,10 +26,7 @@ class PrimeNumberServiceSpec extends Specification with Specs2RouteTest with Pri
     }
 
     "return a MethodNotAllowed error for PUT requests to the root path" in {
-      Put() ~> sealRoute(demoRoute) ~> check {
-        status === MethodNotAllowed
-        entityAs[String] === "HTTP method not allowed, supported methods: GET, POST"
-      }
+      Put() ~> sealRoute(demoRoute) ~> check { status === MethodNotAllowed }
     }
   }
 }

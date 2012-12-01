@@ -16,7 +16,8 @@ import StatusCodes._
 
 // we don't implement our route structure directly in the service actor because
 // we want to be able to test it independently, without having to spin up an actor
-class PrimeNumberServiceActor extends Actor with PrimeNumberService {
+class PrimeNumberServiceActor extends Actor
+  with PredicateCheckerService with PrimeNumberChecker {
 
   // the HttpService trait defines only one abstract member, which
   // connects the services environment to the enclosing actor or test
@@ -30,12 +31,12 @@ class PrimeNumberServiceActor extends Actor with PrimeNumberService {
 
 
 // this trait defines our service behavior independently from the service actor
-trait PrimeNumberService extends HttpService {
+trait PredicateCheckerService extends HttpService with PredicateOnBigInt {
 
   val demoRoute = {
     get {
       path("\\d+".r) { s =>
-        if (PrimeNumberChecker.isPrime(BigInt(s)))
+        if (predicate(BigInt(s)))
           respondWithMediaType(`text/html`) { // XML is marshalled to `text/xml` by default, so we simply override here
             complete(s)
           }

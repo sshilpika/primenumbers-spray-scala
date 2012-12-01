@@ -1,8 +1,8 @@
 package edu.luc.etl.cs433.laufer.primenumbers
 
-object PrimeNumberChecker {
+trait PrimeNumberChecker extends PredicateOnBigInt {
 
-  def isPrime(i: BigInt): Boolean =
+  override def predicate(i: BigInt): Boolean =
     if (i < 2)
       false
     else {
