@@ -9,7 +9,22 @@ See also the
 
 # How to use
 
-http://host/n returns
+Test with
+
+    $ sbt test
+
+Run with 
+
+    $ sbt run
+	
+or
+
+    $ sbt stage
+	$ foreman start
+
+or deploy to a foreman-compatible APaaS provider, such as Heroku.
+
+Then, http://host/n returns
 
 - 200 OK if n is prime
 - 404 Not Found otherwise
