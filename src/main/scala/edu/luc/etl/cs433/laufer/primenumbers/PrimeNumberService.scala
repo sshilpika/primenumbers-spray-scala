@@ -1,18 +1,11 @@
 package edu.luc.etl.cs433.laufer.primenumbers
 
-import java.io.File
-import org.parboiled.common.FileUtils
-import akka.util.Duration
-import akka.util.duration._
-import akka.actor.{ActorLogging, Props, Actor}
-import akka.pattern.ask
-import spray.routing.{HttpService, RequestContext}
-import spray.can.server.HttpServer
-import spray.httpx.encoding.Gzip
-import spray.http._
-import MediaTypes._
-import StatusCodes._
-
+import akka.actor.Actor
+import spray.http.MediaTypes.`text/html`
+import spray.http.StatusCodes.NotFound
+import spray.routing.Directive.pimpApply
+import spray.routing.HttpService
+import spray.routing.directives.CompletionMagnet.{fromObject, fromStatusObject}
 
 // we don't implement our route structure directly in the service actor because
 // we want to be able to test it independently, without having to spin up an actor

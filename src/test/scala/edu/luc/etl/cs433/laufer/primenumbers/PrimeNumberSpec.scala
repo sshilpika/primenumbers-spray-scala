@@ -2,7 +2,6 @@ package edu.luc.etl.cs433.laufer.primenumbers
 
 import org.specs2.mutable.Specification
 
-
 class PrimeNumberSpec extends Specification with PrimeNumberChecker {
 
   "The PrimeNumberChecker" should {

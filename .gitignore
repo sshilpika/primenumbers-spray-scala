@@ -1,6 +1,7 @@
 # general
 *~
 *.log
+\#*
 tmp
 
 # Eclipse

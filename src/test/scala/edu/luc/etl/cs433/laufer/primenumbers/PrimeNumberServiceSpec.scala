@@ -5,7 +5,6 @@ import spray.testkit.Specs2RouteTest
 import spray.http._
 import StatusCodes._
 
-
 class PrimeNumberServiceSpec extends Specification with Specs2RouteTest
   with PredicateCheckerService with PrimeNumberChecker {
 
