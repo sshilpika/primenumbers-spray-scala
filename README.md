@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/lucoodevcourse/primenumbers-spray-scala.svg?branch=master)](https://travis-ci.org/lucoodevcourse/primenumbers-spray-scala)
+
 # Learning Objectives
 
 - Show how CPU-intensive computation can be off-loaded from a mobile app to
@@ -31,16 +33,16 @@ Then, http://host/n returns
 
 # Sample prime numbers to try
 
-- [1013](http://pervasive-dev.cs.luc.edu:8081/1013)
-- [10007](http://pervasive-dev.cs.luc.edu:8081/10007)
-- [100003](http://pervasive-dev.cs.luc.edu:8081/100003)
-- [1000003](http://pervasive-dev.cs.luc.edu:8081/1000003)
-- [10000169](http://pervasive-dev.cs.luc.edu:8081/10000169)
-- [100000007](http://pervasive-dev.cs.luc.edu:8081/100000007)
+- [1013](http://laufer-herokuapp.com/1013)
+- [10007](http://laufer-herokuapp.com/10007)
+- [100003](http://laufer-herokuapp.com/100003)
+- [1000003](http://laufer-herokuapp.com/1000003)
+- [10000169](http://laufer-herokuapp.com/10000169)
+- [100000007](http://laufer-herokuapp.com/100000007)
 
 # Sample non-prime numbers to try
 
-- [999989](http://pervasive-dev.cs.luc.edu:8081/999989)
+- [999989](http://laufer-herokuapp.com/999989)
 
 # References
 
