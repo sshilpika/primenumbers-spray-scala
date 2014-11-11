@@ -15,6 +15,6 @@ object BuildSettings {
     licenses              := Seq("MIT" -> new URL("http://opensource.org/licenses/MIT")),
     scalaVersion          := "2.9.2",
     resolvers             ++= Dependencies.resolutionRepos,
-    scalacOptions         := Seq("-Ydependent-method-types", "-unchecked", "-deprecation", "-encoding", "utf8")
+    scalacOptions         := Seq("-unchecked", "-deprecation", "-encoding", "utf8")
   )
 }
