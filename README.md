@@ -7,7 +7,7 @@
   computation and storage.
 
 See also the
-[corresponding mobile app](https://bitbucket.org/loyolachicagocs_plsystems/primenumbers-android-scala).
+[corresponding mobile app](https://github.com/lucoodevcourse/primenumbers-android-scala).
 
 # How to use
 
@@ -47,7 +47,3 @@ Then, http://host/n returns
 # References
 
 - [Jason Christensen's OOPSLA 2009 presentation](http://www.slideshare.net/jasonc411/oopsla-2009-combining-rest-and-cloud-a-practitioners-report)
-
-# TODO
-
-- Upgrade to Scala 2.10 and corresponding versions of Akka and Spray
