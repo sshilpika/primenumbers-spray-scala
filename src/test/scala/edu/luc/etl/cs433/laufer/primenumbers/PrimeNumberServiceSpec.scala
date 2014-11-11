@@ -13,7 +13,7 @@ class PrimeNumberServiceSpec extends Specification with Specs2RouteTest
   "The PrimeNumberService" should {
 
     "identify 6007 as a prime" in {
-      Get("/6007") ~> demoRoute ~> check { entityAs[String] must contain("6007") }
+      Get("/6007") ~> demoRoute ~> check { responseAs[String] must contain("6007") }
     }
 
     "identify 6008 as a non-prime" in {

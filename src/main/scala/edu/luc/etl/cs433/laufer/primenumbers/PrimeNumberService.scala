@@ -1,11 +1,10 @@
 package edu.luc.etl.cs433.laufer.primenumbers
 
 import akka.actor.Actor
+import spray.routing._
+import spray.http._
 import spray.http.MediaTypes.`text/html`
 import spray.http.StatusCodes.NotFound
-import spray.routing.Directive.pimpApply
-import spray.routing.HttpService
-import spray.routing.directives.CompletionMagnet.{fromObject, fromStatusObject}
 
 // we don't implement our route structure directly in the service actor because
 // we want to be able to test it independently, without having to spin up an actor
@@ -28,7 +27,7 @@ trait PredicateCheckerService extends HttpService with PredicateOnBigInt {
 
   val demoRoute = {
     get {
-      path("\\d+".r) { s =>
+      path("\\d+".r) { s: String =>
         if (predicate(BigInt(s)))
           respondWithMediaType(`text/html`) { // XML is marshalled to `text/xml` by default, so we simply override here
             complete(s)

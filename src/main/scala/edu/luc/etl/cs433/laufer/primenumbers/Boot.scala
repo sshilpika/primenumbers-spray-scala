@@ -1,17 +1,23 @@
 package edu.luc.etl.cs433.laufer.primenumbers
 
-import scala.util.Properties
-import akka.actor.Props
-import spray.can.server.SprayCanHttpServerApp
+import akka.actor.{ActorSystem, Props}
+import akka.io.IO
+import spray.can.Http
+import akka.pattern.ask
+import akka.util.Timeout
+import concurrent.duration._
+import util.Properties
 
-object Boot extends App with SprayCanHttpServerApp {
+object Boot extends App {
+
+  // we need an ActorSystem to host our application in
+  implicit val system = ActorSystem("on-spray-can")
 
   // create and start our service actor
-  val service = system.actorOf(Props[PrimeNumberServiceActor], "demo-service")
+  val service = system.actorOf(Props[PrimeNumberServiceActor], "primechecker-service")
 
-  // make compatible with foreman for deployment to Heroku
-  val port = Properties.envOrElse("PORT", "8080") toInt
-
-  // create a new HttpServer using our handler and tell it where to bind to
-  newHttpServer(service) ! Bind(interface = "0.0.0.0", port = port)
+  implicit val timeout = Timeout(5.seconds)
+  val port = Properties.envOrElse("PORT", "8080").toInt
+  // start a new HTTP server on port 8080 with our service actor as the handler
+  IO(Http) ? Http.Bind(service, interface = "0.0.0.0", port = port)
 }
