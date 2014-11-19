@@ -2,6 +2,8 @@ instrumentSettings
 
 org.scoverage.coveralls.CoverallsPlugin.coverallsSettings
 
+coverageExcludedPackages := ".*\.Boot;.*\.PrimeNumberServiceActor"
+
 organization  := "edu.luc.etl"
 
 version       := "0.0.2"

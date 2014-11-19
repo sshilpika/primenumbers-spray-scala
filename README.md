@@ -7,6 +7,9 @@
   the cloud, by comparison to a mobile device, an unlimited resource for
   computation and storage.
 
+- End-to-end example of continuous integration (CI), continuous
+  deployment/delivery (CD), and DevOps in Scala.
+
 See also the
 [corresponding mobile app](https://github.com/lucoodevcourse/primenumbers-android-scala).
 
@@ -48,3 +51,5 @@ Then, http://host/n returns
 # References
 
 - [Jason Christensen's OOPSLA 2009 presentation](http://www.slideshare.net/jasonc411/oopsla-2009-combining-rest-and-cloud-a-practitioners-report)
+- [James Earl Douglas's SBTB 2014 presentation](https://www.youtube.com/watch?v=sZYAFWTyOlE)
+- [James Earl Douglas's Scala CI example](https://github.com/earldouglas/scala-ci)
