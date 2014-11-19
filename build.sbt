@@ -1,9 +1,3 @@
-instrumentSettings
-
-org.scoverage.coveralls.CoverallsPlugin.coverallsSettings
-
-coverageExcludedPackages := ".*\.Boot;.*\.PrimeNumberServiceActor"
-
 organization  := "edu.luc.etl"
 
 version       := "0.0.2"
@@ -34,6 +28,14 @@ libraryDependencies ++= {
     "org.specs2"          %%  "specs2-core"   % specs2V % "test"
   )
 }
+
+instrumentSettings
+
+ScoverageKeys.excludedPackages := ".*Boot;.*PrimeNumberServiceActor"
+
+ScoverageKeys.highlighting := false
+
+org.scoverage.coveralls.CoverallsPlugin.coverallsSettings
 
 Revolver.settings
 
