@@ -1,8 +1,12 @@
+instrumentSettings
+
+org.scoverage.coveralls.CoverallsPlugin.coverallsSettings
+
 organization  := "edu.luc.etl"
 
 version       := "0.0.2"
 
-scalaVersion  := "2.10.3"
+scalaVersion  := "2.10.4"
 
 scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8")
 
@@ -29,6 +33,6 @@ libraryDependencies ++= {
   )
 }
 
-seq(Revolver.settings: _*)
+Revolver.settings
 
 seq(com.typesafe.sbt.SbtStartScript.startScriptForClassesSettings: _*)
