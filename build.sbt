@@ -29,14 +29,15 @@ libraryDependencies ++= {
   )
 }
 
-instrumentSettings
-
-ScoverageKeys.excludedPackages := ".*Boot;.*PrimeNumberServiceActor"
-
-ScoverageKeys.highlighting := false
-
-org.scoverage.coveralls.CoverallsPlugin.coverallsSettings
-
 Revolver.settings
 
 seq(com.typesafe.sbt.SbtStartScript.startScriptForClassesSettings: _*)
+
+// The next few lines will work only with sbt-scoverage version 0.99.7.1.
+// Do not update until sbt-scoverage 1.0 stabilizes!
+
+instrumentSettings
+
+ScoverageKeys.excludedPackages in ScoverageCompile := """.*\.Boot;.*\.PrimeNumberServiceActor"""
+
+org.scoverage.coveralls.CoverallsPlugin.coverallsSettings
