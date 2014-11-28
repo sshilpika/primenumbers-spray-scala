@@ -11,7 +11,7 @@
   deployment/delivery (CD), and DevOps in Scala.
 
 See also the
-[corresponding mobile app](https://github.com/lucoodevcourse/primenumbers-android-scala).
+[corresponding mobile app](https://github.com/LoyolaChicagoCode/primenumbers-android-scala).
 
 # How to use
 
