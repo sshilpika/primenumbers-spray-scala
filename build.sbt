@@ -1,3 +1,5 @@
+import AssemblyKeys._
+
 organization  := "edu.luc.etl"
 
 version       := "0.0.2"
@@ -41,3 +43,5 @@ instrumentSettings
 ScoverageKeys.excludedPackages in ScoverageCompile := """.*\.Boot;.*\.PrimeNumberServiceActor"""
 
 org.scoverage.coveralls.CoverallsPlugin.coverallsSettings
+
+assemblySettings
