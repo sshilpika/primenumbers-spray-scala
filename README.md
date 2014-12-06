@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/lucoodevcourse/primenumbers-spray-scala.svg?branch=master)](https://travis-ci.org/lucoodevcourse/primenumbers-spray-scala) 
-[![Coverage Status](https://coveralls.io/repos/lucoodevcourse/primenumbers-spray-scala/badge.png)](https://coveralls.io/r/lucoodevcourse/primenumbers-spray-scala)
+[![Build Status](https://travis-ci.org/LoyolaChicagoCode/primenumbers-spray-scala.svg?branch=master)](https://travis-ci.org/LoyolaChicagoCode/primenumbers-spray-scala) 
+[![Coverage Status](https://coveralls.io/repos/LoyolaChicagoCode/primenumbers-spray-scala/badge.png)](https://coveralls.io/r/LoyolaChicagoCode/primenumbers-spray-scala)
 
 # Learning Objectives
 

@@ -6,6 +6,6 @@ deploy:
   app: laufer-primechecker
   strategy: git
   api_key:
-    secure: FZ6iKDXwXkaJizeF7mCfNM3PnwuOy8SSQivEwjMlG17Gvfib4BehbD4Ddt/zZln8ZLW/uOzpcn07ewgVKpbEaoxCuPVBUMPJnNcfvlKbiAM9Kajwsrmc58WH582i7bWSSjuaGu3m2Ueo8iMRtICDgA7moN+r+k3RZErJk4eEzuM=
+    secure: Li030Um94jb36d+/ShacYbZrMbJLjOmBpnS/N1GDfnWSSiZrb5xcnx4BFeVqEcPlvOwAadpWH0MNj0ZOsvzwnVdYWs495PqLGFqFlqmj5ir5Cq5B58mqP0h3Fc8V4DZEQGRmOPqGk2FPDh/TLzJ1/JnhdqygmzIfWhbbxnyxQ9Q=
   on:
-    repo: lucoodevcourse/primenumbers-spray-scala
+    repo: LoyolaChicagoCode/primenumbers-spray-scala
