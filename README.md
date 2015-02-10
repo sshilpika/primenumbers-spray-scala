@@ -37,16 +37,16 @@ Then, http://host/n returns
 
 # Sample prime numbers to try
 
-- [1013](http://laufer-primechecker.herokuapp.com/1013)
-- [10007](http://laufer-primechecker.herokuapp.com/10007)
-- [100003](http://laufer-primechecker.herokuapp.com/100003)
-- [1000003](http://laufer-primechecker.herokuapp.com/1000003)
-- [10000169](http://laufer-primechecker.herokuapp.com/10000169)
-- [100000007](http://laufer-primechecker.herokuapp.com/100000007)
+- [1013](http://primenumber-shilpi.herokuapp.com/1013)
+- [10007](http://primenumber-shilpi.herokuapp.com/10007)
+- [100003](http://primenumber-shilpi.herokuapp.com/100003)
+- [1000003](http://primenumber-shilpi.herokuapp.com/1000003)
+- [10000169](http://primenumber-shilpi.herokuapp.com/10000169)
+- [100000007](http://primenumber-shilpi.herokuapp.com/100000007)
 
 # Sample non-prime numbers to try
 
-- [999989](http://laufer-primechecker.herokuapp.com/999989)
+- [999989](http://primenumber-shilpi.herokuapp.com/999989)
 
 # References
 
